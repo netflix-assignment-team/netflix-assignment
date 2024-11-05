@@ -1,0 +1,98 @@
+html, body {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.netflix {
+    position: relative;
+    width: 181.5px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.n-1 {
+    background-color: #B10510;
+    height: 300px;
+    width: 60px;
+    position: absolute;
+    top: 300px;
+    animation: anim-top 0.8s linear forwards;
+    animation-delay: 0.2s; /* 딜레이 조정 */
+
+}
+
+.n-1::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 7px;
+    background-color: black;
+    bottom: -2px;
+    transform: rotateZ(-3deg);
+    z-index: 99;
+}
+.n-3 {
+    background-color: #B10510;
+    height: 300px;
+    width: 60px;
+    position: absolute;
+    top: 300px;
+    right: 0;
+    animation: anim-top 0.4s linear forwards;
+    animation-delay: 1.4s;
+
+}
+.n-3::after {
+    content: '';
+    position: absolute;
+    width: 130px;
+    height: 10px;
+    background-color: black;
+    bottom: -5px;
+    left: -25px;
+    transition: all 0.3s ease-in-out forwards;
+    transform: rotateZ(5deg);
+    z-index: 99;
+
+}
+
+.n-2 {
+    background-color: transparent;
+    height: 375px;
+    width: 60px;
+    position: absolute;
+    transform: rotateZ(-21deg);
+    top: -51px;
+    left: 56.25px;
+    box-shadow: 4px 4px 15px #00000085;
+}
+.filler {
+    background-color: #e50815;
+    height: 0;
+    animation: anim-filler 0.4s linear forwards;
+    animation-delay: 1s;
+}
+
+@keyframes anim-top {
+    0% {
+        top: 300px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+@keyframes anim-filler {
+    0% {
+        height: 0px;
+    }
+    100% {
+        height: 375px;
+    }
+}
